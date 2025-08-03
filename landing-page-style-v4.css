@@ -1,0 +1,1371 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFF8F1;
+  color: #5C4B51;
+}
+
+header {
+  background-color: #F6D6AD;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body,
+header,
+footer {
+  background-color: #F2F5F5;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5C4B51;
+  font-weight: 500;
+}
+
+.botao-whatsapp {
+  background-color: #CDB4DB;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #F2F5F5;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .sub {
+  background-color: #E2ECE9;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.hero-content iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.botao-agendar {
+  display: inline-block;
+  background-color: #FFB5A7;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-img {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-img img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+section {
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  background-color: #C7AD9B;
+  padding: 1rem;
+  color: #0a0909;
+}
+
+/* Ícone flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Meu trabalho */
+.meu-trabalho {
+  background-color: #c4c1c0;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  border-radius: 12px;
+}
+
+.meu-trabalho h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards-trabalho {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-trabalho {
+  background-color: #857b70;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    box-shadow 0.3s cubic-bezier(.4, 2, .3, 1),
+    transform 0.25s cubic-bezier(.4, 2, .3, 1),
+    border 0.3s;
+  /* outros estilos já existentes */
+}
+
+.card-trabalho:hover,
+.card-trabalho:focus-within {
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.24), 0 1.5px 8px rgba(44, 62, 80, 0.10);
+  transform: scale(1.04) translateY(-6px);
+  outline: none;
+  z-index: 2;
+  /* opcional: efeito de brilho */
+  /* filter: brightness(1.04); */
+}
+
+.card-trabalho .icone {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.card-trabalho h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #F6EFD9;
+}
+
+.card-trabalho p {
+  font-size: 0.95rem;
+  color: #F6F6F6;
+}
+
+.cta-trabalho {
+  margin-top: 2rem;
+}
+
+.cta-trabalho .botao-agendar {
+  background-color: #fff;
+  color: #8D6A5A;
+}
+
+.sobre {
+  background-color: #F2F5F5;
+  padding: 60px 20px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
+.sobre-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-com-fundo {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.imagem-com-fundo .imagem-fundo {
+  position: absolute;
+  top: -50px;
+  left: auto;
+  right: -60px;
+  width: 80%;
+  height: 520px;      /* ajuste aqui para o tamanho desejado */
+  border-radius: 30px;
+  z-index: 0;
+  object-fit: cover;  /* garante que a imagem preencha a área */
+}
+
+.imagem-com-fundo .imagem-frontal {
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.sobre-texto {
+  max-width: 500px;
+}
+
+.sobre-texto h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #887166;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.sobre-texto h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sobre-texto p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Botão aproveitando estilo já existente */
+.botao {
+  background-color: #C7AD9B;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #96877b;
+}
+
+.logo {
+  width: 200px;
+}
+
+.wrapper-imagem-fundo {
+  position: relative;
+  background: url("imagens-png/fundo2.png") no-repeat center top;
+  background-size: cover;
+  background-position-y: 100px;
+  padding: 160px 0 60px;
+  z-index: 0;
+}
+
+.wrapper-imagem-fundo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 245, 245, 0.6);
+  z-index: 1;
+}
+
+.wrapper-imagem-fundo>section {
+  position: relative;
+  z-index: 2;
+  /* garante que o conteúdo fique acima da imagem de fundo */
+}
+
+.wrapper-sobre-psicologa {
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  min-height: 420px;
+}
+
+/*E9DDCA*/
+.sobre-psicologa {
+  background: #C7AD9B;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  color: #fff;
+  padding: 80px 80px;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.animar-entrada-sobre .container-psicologa {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 1s cubic-bezier(.6, .2, .2, 1), transform 1s cubic-bezier(.6, .2, .2, 1);
+}
+
+.animar-entrada-sobre.apareceu .container-psicologa {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vanilla-ice-imagem {
+  max-width: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.container-psicologa {
+  display: flex;
+  align-items: center;
+  /* Centraliza verticalmente */
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.psicologa-imagem-sentada {
+  flex-shrink: 0;
+  width: 350px;
+  /* Ajuste o tamanho como preferir */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.psicologa-imagem-sentada img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}
+
+.container-psicologa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  /* NÃO vai quebrar no desktop */
+}
+
+.psicologa-conteudo {
+  flex: 1 1 0;
+  max-width: 500px;
+}
+
+.psicologa-imagem {
+  flex: 1;
+  text-align: center;
+}
+
+.psicologa-imagem img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+.psicologa-conteudo h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.psicologa-conteudo .crp {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.psicologa-conteudo p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.psicologa-conteudo ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.psicologa-conteudo ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.sobre-psicologa .botao-agendar {
+  background-color: #fff;
+  color: #8B5E3C;
+  font-weight: bold;
+  padding: 0.8rem 1.4rem;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.sobre-psicologa .botao-agendar:hover {
+  background-color: #d9d9d9;
+}
+
+.sobre-conteudo.animar-entrada .sobre-imagem {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.sobre-conteudo.animar-entrada .sobre-texto {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.sobre-conteudo.animar-entrada .botao {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Estado final (posição normal, visível) */
+.sobre-conteudo.apareceu .sobre-imagem,
+.sobre-conteudo.apareceu .sobre-texto {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.sobre-conteudo.apareceu .botao {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wrapper-imagem-fundo {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagem-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  /* maior que a tela para ter espaço de movimento */
+  z-index: 0;
+}
+
+.imagem-parallax img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(0);
+  transition: transform 0.1s ease-out;
+}
+
+.wrapper-imagem-fundo>section {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+.decorative-branch {
+  width: 80px;
+  height: 300px;
+  position: absolute;
+  left: -100px;
+  /* Ajuste para posicionar ao lado */
+  top: 40px;
+  /* Ajuste vertical */
+  z-index: 1;
+  background: url('imagens-png/png-flor.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  /* decorativo */
+}
+
+
+.divider-svg-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+  height: 450px;
+  /* igual ao SVG */
+}
+
+.divider-svg-vertical svg {
+  display: block;
+  height: 100%;
+  width: 10px;
+}
+
+.sobre-titulo-linha {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 10px;
+  /* igual ao espaçamento anterior do h3 */
+}
+
+.divider-svg-horizontal {
+  display: flex;
+  align-items: center;
+  height: 6px;
+}
+
+.divider-svg-horizontal svg {
+  display: block;
+  height: 100%;
+  width: 300px;
+}
+
+
+.servicos-section {
+  background: #e7ebec;
+  padding: 40px 0;
+  border-radius: 24px;
+  margin: 40px auto;
+  max-width: 1800px;
+}
+
+.servicos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.servicos-titulo {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #353535;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.servicos-descricao {
+  text-align: center;
+  color: #444;
+  font-size: 1.2rem;
+  margin-bottom: 48px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(340px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 42px 42px;
+  /* espaçamento vertical/horizontal */
+  justify-items: center;
+}
+
+.servico-card {
+  background: #fff;
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+  max-width: 600px;
+  /* Cards largos! */
+  min-height: 250px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.servico-card img {
+  width: 230px;
+  min-height: 250px;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 0;
+}
+
+.servico-info {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.servico-info h3 {
+  font-size: 1.20rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #353535;
+  letter-spacing: 0.5px;
+}
+
+.servico-info h3.avaliacao {
+  color: #47a7a0;
+  /* Verde destaque para “Avaliação psicológica” */
+}
+
+.servico-info p {
+  margin: 0;
+  color: #444;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 32px;
+  }
+
+  .servico-card {
+    max-width: 100%;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .servico-card img {
+    width: 100%;
+    min-height: 180px;
+    height: 180px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .servico-info {
+    padding: 24px 18px;
+  }
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 40px;
+  gap: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+}
+
+.faq-label {
+  padding-left: 140px;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.faq-label h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.4rem;
+  color: #8B5E3C;
+  font-weight: 400;
+  margin: 170px 0 0 0;
+  /* 80px de margem superior para descer o texto */
+  letter-spacing: 0.5px;
+  text-align: left;
+  line-height: 1.1;
+  background: none;
+}
+
+.faq-container {
+  width: 420px;
+  min-width: 320px;
+  max-width: 520px;
+  margin-right: 0;
+}
+
+.faq-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-container h2::after {
+  content: "FAQ";
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%);
+  font-size: 3.5rem;
+  color: #edd2cd;
+  z-index: 0;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-question {
+  background: #C7AD9B;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 7px;
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 36px;
+  position: relative;
+}
+
+.faq-question[aria-expanded="true"] {
+  background: #e6cbb8;
+}
+
+.faq-question::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L10 8L6 12" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/contain no-repeat;
+  transform: rotate(0deg);
+  /* Para a direita */
+  transition: transform 0.2s;
+}
+
+.faq-item.open .faq-question::after {
+  transform: rotate(90deg);
+  /* Para baixo */
+}
+
+.faq-answer {
+  display: none;
+  background: #fff;
+  color: #444;
+  font-size: 1rem;
+  padding: 18px;
+  border: 1px solid #eee;
+  border-radius: 0 0 7px 7px;
+  margin-top: -2px;
+  animation: fadeIn 0.3s;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .faq-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+    gap: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+
+  .faq-label {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .faq-label h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+    color: #8B5E3C;
+    font-weight: 400;
+    margin: 170px 0 0 0;
+    /* 80px de margem superior para descer o texto */
+    letter-spacing: 0.5px;
+    text-align: left;
+    line-height: 1.1;
+    background: none;
+  }
+
+  .faq-container {
+    width: 420px;
+    min-width: 320px;
+    max-width: 520px;
+    margin-right: 0;
+  }
+
+  .faq-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .faq-container h2::after {
+    content: "FAQ";
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    color: #edd2cd;
+    z-index: 0;
+    font-weight: 900;
+    pointer-events: none;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .faq-question {
+    background: #C7AD9B;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 7px;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 36px;
+    position: relative;
+  }
+
+  .faq-question[aria-expanded="true"] {
+    background: #e6cbb8;
+  }
+
+  .faq-question::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L10 8L6 12" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/contain no-repeat;
+    transform: rotate(0deg);
+    /* Para a direita */
+    transition: transform 0.2s;
+  }
+
+  .faq-item.open .faq-question::after {
+    transform: rotate(90deg);
+    /* Para baixo */
+  }
+
+  .faq-answer {
+    display: none;
+    background: #fff;
+    color: #444;
+    font-size: 1rem;
+    padding: 18px;
+    border: 1px solid #eee;
+    border-radius: 0 0 7px 7px;
+    margin-top: -2px;
+    animation: fadeIn 0.3s;
+  }
+
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .sobre-imagem {
+    padding-top: 70px;
+    max-width: 500px;
+  }
+  .imagem-com-fundo{
+
+  }
+  html, body {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    background: #F2F5F5;
+    overflow-x: hidden;
+  }
+
+  header {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 0.7rem 0.5rem;
+    box-sizing: border-box;
+    overflow-x: visible;
+  }
+  header .container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  nav {
+    width: 100%;
+    left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    align-items: flex-start;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 6px 0;
+    display: block;
+    width: 100%;
+  }
+
+  .botao {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 12px 0;
+    margin: 4px 0;
+    border-radius: 16px;
+  }
+
+   .botao-agendar {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    width: auto !important;
+    min-width: 110px;
+    max-width: 200px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .botao-agendar .botao {
+    width: auto !important;
+  }
+
+  /* Sessão sobre */
+  .sobre {
+    padding: 28px 4px 10px 4px;
+  }
+  .sobre-conteudo {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0;
+    max-width: 100vw;
+  }
+  .sobre-texto {
+    max-width: 100vw;
+    padding: 0 3px;
+  }
+  .sobre-texto h2 {
+    font-size: 1.4rem;
+  }
+  .sobre-texto p, .sobre-texto h4 {
+    font-size: 1rem;
+  }
+  .imagem-com-fundo {
+    max-width: 96vw;
+    min-width: 0;
+  }
+  .imagem-com-fundo .imagem-fundo {
+    width: 88vw;
+    height: 210px;
+    top: -18px;
+    right: -18px;
+    border-radius: 14px;
+  }
+  .imagem-com-fundo .imagem-frontal {
+    border-radius: 16px;
+  }
+
+  /* Parallax wrapper */
+  .wrapper-imagem-fundo {
+    padding: 60px 0 30px 0;
+    background-position-y: 30px;
+  }
+  .imagem-parallax {
+    height: 60vw;
+    min-height: 170px;
+  }
+
+  /* Sessão "meu trabalho" */
+  .meu-trabalho {
+    padding: 2rem 0.5rem 2rem 0.5rem;
+    border-radius: 10px;
+  }
+  .cards-trabalho {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card-trabalho {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .card-trabalho h3 {
+    font-size: 1.05rem;
+  }
+  .cta-trabalho {
+    margin-top: 1.1rem;
+  }
+
+  /* Serviços */
+  .servicos-section {
+    padding: 20px 0;
+    border-radius: 12px;
+    margin: 24px 0;
+    max-width: 100vw;
+  }
+  .servicos-container {
+    padding: 0 2px;
+    max-width: 100vw;
+  }
+  .servicos-titulo {
+    font-size: 2rem;
+  }
+  .servicos-descricao {
+    font-size: 1rem;
+    margin-bottom: 24px;
+    padding: 0 2px;
+  }
+  .servicos-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    justify-items: stretch;
+  }
+  .servico-card {
+    flex-direction: column;
+    min-height: 0;
+    border-radius: 14px;
+    max-width: 98vw;
+    width: 100%;
+  }
+  .servico-card img {
+    width: 100%;
+    min-height: 130px;
+    height: 130px;
+    border-radius: 14px 14px 0 0;
+  }
+  .servico-info {
+    padding: 12px 6px;
+  }
+  .servico-info h3 {
+    font-size: 1.05rem;
+  }
+  .servico-info p {
+    font-size: 0.96rem;
+  }
+
+  /* Sobre psicóloga */
+  .wrapper-sobre-psicologa {
+    margin-top: 32px;
+    margin-bottom: 14px;
+    min-height: 0;
+    overflow: visible;
+  }
+  .sobre-psicologa {
+    width: 102%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 18px 8px;
+    border-radius: 14px;
+  }
+  .container-psicologa {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100vw;
+    padding: 0;
+  }
+  .psicologa-imagem-sentada {
+    width: 85vw;
+    margin: 0 auto 10px auto;
+  }
+  .psicologa-imagem-sentada img {
+    border-radius: 14px;
+    width: 100%;
+  }
+  .divider-svg-vertical {
+    display: none;
+  }
+  .psicologa-conteudo {
+    max-width: 100vw;
+    padding: 0 2px;
+  }
+  .psicologa-conteudo h2 {
+    font-size: 1.2rem;
+  }
+  .psicologa-conteudo .crp {
+    font-size: 1rem;
+  }
+  .psicologa-conteudo p {
+    font-size: 0.97rem;
+    padding: 0 2px;
+  }
+
+  /* FAQ */
+  .faq-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    max-width: 100vw;
+    padding: 0 2px;
+    margin-top: 26px;
+  }
+  .faq-label {
+    padding-left: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    width: 100%;
+  }
+  .faq-label h2 {
+    font-size: 1.4rem;
+    margin: 16px 0 0 0;
+    text-align: center;
+    padding: 0;
+  }
+  .faq-container {
+    width: 99vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0 2px;
+  }
+  .faq-list {
+    gap: 10px;
+  }
+  .faq-question {
+    font-size: 1rem;
+    padding: 12px 10px 12px 10px;
+    border-radius: 6px;
+  }
+  .faq-answer {
+    font-size: 0.98rem;
+    padding: 14px 8px;
+    border-radius: 0 0 6px 6px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.98rem;
+    padding: 0.8rem 2px;
+    border-radius: 0;
+    margin-top: 12px;
+    width: 100vw;
+  }
+
+  /* WhatsApp Float */
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Divider SVGs e decorativos */
+  .divider-svg-horizontal svg {
+    width: 120px !important;
+  }
+  .decorative-branch {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .sobre-psicologa {
+    width: 102%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 14px 4px;
+    border-radius: 10px;
+  }
+  header {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 0.7rem 0.5rem;
+    box-sizing: border-box;
+    overflow-x: visible;
+  }
+  header .container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  nav {
+    width: 100%;
+    left: 0;
+  }
+  .logo {
+    width: 120px;
+    margin-right: 6px;
+  }
+  .menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+    z-index: 1002;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 3px 0;
+    background: #5C4B51; /* mesma cor do texto/ícones do header */
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  nav {
+    position: absolute;
+    top: 60px; /* ou ajuste conforme o header */
+    left: 0;
+    width: 100vw;
+    background: #C7AD9B; /* mesma cor do header */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: none;
+    z-index: 1001;
+    border-radius: 0 0 16px 16px;
+  }
+  nav.open {
+    display: block;
+    animation: fadeInMenu 0.25s;
+  }
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    padding: 12px 0;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li a {
+    display: block;
+    padding: 16px 24px;
+    font-size: 1.07rem;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+  }
+  .botao {
+    margin-left: auto;
+    font-size: 1rem;
+    width: auto;
+    min-width: 75px;
+    padding: 8px 20px;
+    border-radius: 18px;
+    z-index: 1002;
+  }
+}
